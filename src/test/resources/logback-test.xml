@@ -1,0 +1,25 @@
+<configuration scan="false" monitorInterval="60" packagingData="true" debug="false">
+
+	<appender name="HUMAN" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder >
+			<pattern>TEST %d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+
+
+
+	<logger name="org.http4s.client.PoolManager" level="INFO"/>
+	<logger name="org.http4s.client.blaze" level="INFO"/>
+	<logger name="org.http4s.blaze.channel" level="INFO"/>
+	<logger name="org.http4s.blazecore" level="INFO"/>
+	<logger name="io.netty" level="WARN"/>
+	<logger name="software.amazon.awssdk.auth" level="WARN"/>
+	<logger name="software.amazon.awssdk.core" level="WARN"/>
+	<logger name="software.amazon.awssdk.regions.providers" level="WARN"/>
+
+
+	<root level="DEBUG">
+		<appender-ref ref="HUMAN"/>
+	</root>
+</configuration>
